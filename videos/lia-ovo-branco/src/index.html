@@ -1,0 +1,9 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@900&display=block" rel="stylesheet">
+<style>html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}#s{width:1080px;height:1920px}</style>
+<script src="lib.js"></script><script src="scenes.js"></script></head>
+<body><div id="s"></div><span style="font-family:'Lilita One';position:absolute;opacity:0">a</span><span style="font-family:Montserrat;font-weight:900;position:absolute;opacity:0">a</span>
+<script>
+window.init = async (words) => { CHUNKS = buildChunks(words); await document.fonts.load('900 80px Montserrat'); await document.fonts.load('80px "Lilita One"'); await document.fonts.ready; return true; };
+window.renderAt = (T) => { document.getElementById('s').innerHTML = frameSVG(T); };
+</script></body></html>
